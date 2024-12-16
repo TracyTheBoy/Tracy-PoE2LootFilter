@@ -43,7 +43,15 @@ MinimapIcon 0 Red Star
 #--------------------------
 
 Show
-StackSize >= 500
+StackSize < 100
+BaseType == "Gold"
+SetTextColor 180 180 180
+SetBorderColor 0 0 0 255
+SetBackgroundColor 0 0 0 180
+SetFontSize 20
+
+Show
+StackSize >= 1000
 BaseType == "Gold"
 SetTextColor 255 255 255
 SetBorderColor 255 255 255
@@ -54,6 +62,7 @@ BaseType == "Gold"
 SetTextColor 180 180 180
 SetBorderColor 0 0 0 255
 SetBackgroundColor 0 0 0 180
+SetFontSize 30
 
 #--------------------------
 # Uncut Gems
@@ -66,6 +75,12 @@ SetBorderColor 20 240 240
 PlayAlertSound 2 300
 PlayEffect Cyan
 MinimapIcon 1 Cyan Triangle
+ItemLevel >= 17
+
+Hide
+BaseType "Uncut "
+ItemLevel < 17
+
 
 #--------------------------
 # Socketables and Special Character Equipment
@@ -169,7 +184,11 @@ MinimapIcon 2 Grey Circle
 
 Show
 Class "Currency"
-BaseType "Wisdom" "Shard"
+BaseType "Shard"
+
+Hide
+Class "Currency"
+BaseType "Wisdom" 
 
 # Unknown currency
 Show
@@ -233,28 +252,31 @@ SetFontSize 40
 # Salvagable Items
 #--------------------------
 
-Show
-Sockets > 0
-Rarity Normal
+Hide
+Sockets == 1
+Rarity <= Magic
+Class "Flask" "Body" "Helmet" "Boots" "Gloves" "Shields" "Quiver" "Mace" "Staff" "Quarter" "Bow" "Crossbow" "Wand" "Sceptre" "Focus"
 SetBorderColor 200 200 200
 SetFontSize 35
 
 Show
-Quality > 10
+Sockets == 2
 Rarity Normal
 SetBorderColor 200 200 200
 SetFontSize 35
+Height 3
 
 Show
-Sockets > 0
+Sockets == 2
 Rarity Magic
 SetBorderColor 0 0 200
 SetFontSize 35
+Height 3
 
 Show
 Quality > 10
-Rarity Magic
-SetBorderColor 0 0 200
+Rarity <= Magic
+SetBorderColor 200 200 200
 SetFontSize 35
 
 #--------------------------
@@ -265,16 +287,16 @@ SetFontSize 35
 ### OPTIONAL RULE: Hide random bases
 # REMOVE THE BASES YOU --DO-- WANT TO SEE BEFORE SETTING TO HIDE
 
-# Hide
-# Rarity <= Magic
-# Class "Flasks" "Body Armours" "Helmets" "Boots" "Gloves" "Shields" "Foci" "Quivers" "One Hand Maces" "Two Hand Maces" "Staves" "Quarterstaves" "Bows" "Crossbows" "Wands" "Sceptres"
-# AreaLevel >= 65
+Hide
+Rarity <= Magic
+Class "Flask" "Body" "Helmet" "Boots" "Gloves" "Shields" "Quiver" "Mace" "Staff" "Quarter" "Bow" "Crossbow" "Wand" "Sceptre" "Focus" 
+AreaLevel >= 65
 
 ### OPTIONAL RULE: REDUCES BACKGROUND ON LOW LEVEL BASES
 
 # Show
 # Rarity <= Magic
-# Class "Flasks" "Body Armours" "Helmets" "Boots" "Gloves" "Shields" "Foci" "Quivers" "One Hand Maces" "Two Hand Maces" "Staves" "Quarterstaves" "Bows" "Crossbows" "Wands" "Sceptres"
+# Class "Flask" "Body" "Helmet" "Boots" "Gloves" "Shields" "Quiver" "Mace" "Staff" "Quarter" "Bow" "Crossbow" "Wand" "Sceptre" "Focus"
 # AreaLevel >= 65
 # DropLevel <= 50
 # SetBackgroundColor 0 0 0 125
