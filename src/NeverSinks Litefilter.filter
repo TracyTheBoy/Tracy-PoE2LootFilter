@@ -90,24 +90,9 @@ Show # $type->uncutgem $level->19
 	PlayEffect Yellow
 	MinimapIcon 1 Yellow Triangle
 
-Show # $type->uncutgem->skill $level->18
-	BaseType == "Uncut Spirit Gem"
-	ItemLevel == 18
-	AreaLevel <= 78
-	SetFontSize 35
-	SetTextColor 30 190 190 255
-	SetBorderColor 30 190 190 255
-	PlayAlertSound 2 100
-	PlayEffect White
-	MinimapIcon 1 White Triangle
-
 Hide
-BaseType == "Uncut Skill Gem"
+BaseType == "Uncut Skill Gem"  "Uncut Spirit Gem"
 ItemLevel < 19
-
-Hide
-BaseType == "Uncut Spirit Gem"
-ItemLevel < 18
 
 Hide
 BaseType == "Uncut Support Gem"
@@ -203,7 +188,7 @@ MinimapIcon 1 White Circle
 # Currency Tier C: Vaal, Chaos, Exalt, Exotic
 Show
 Class "Currency"
-BaseType "Arcanist's Etcher" "Armourer's Scrap" "Blacksmith's Whetstone"  "Orb of Transmutation" "Regal Shard" "Chance Shard"
+BaseType "Arcanist's Etcher" "Armourer's Scrap" "Blacksmith's Whetstone" "Regal Shard" "Chance Shard"
 SetTextColor 255 207 132
 SetBorderColor 255 207 132
 MinimapIcon 2 Grey Circle
@@ -221,7 +206,7 @@ BaseType "Shard"
 
 Hide
 Class "Currency"
-BaseType "Wisdom" "Orb of Augmentation"
+BaseType "Wisdom" "Orb of Augmentation" "Orb of Transmutation"
 
 # Unknown currency
 Show
