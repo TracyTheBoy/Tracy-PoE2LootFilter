@@ -277,16 +277,6 @@ PlayAlertSound 2 300
 PlayEffect Grey
 MinimapIcon 2 Grey Circle
 
-Show
-BaseType "Waystone"
-Rarity <= Rare
-SetTextColor 255 255 255
-SetBorderColor 255 255 255
-PlayAlertSound 4 300
-PlayEffect White
-MinimapIcon 1 White Square
-SetFontSize 40
-
 #--------------------------
 # Value Rares
 #--------------------------
@@ -319,14 +309,9 @@ Rarity <= Magic
 #--------------------------
 
 Hide
-Sockets <= 1
+Sockets <= 2
 Rarity <= Magic
 Class "Flask" "Body" "Helmet" "Boots" "Gloves" "Shields" "Quiver" "Mace" "Staff" "Quarter" "Bow" "Crossbow" "Wand" "Sceptre" "Focus"
-
-Hide
-Sockets == 2
-Rarity <= Magic
-Class "Body"
 
 Show
 Quality > 10
@@ -335,12 +320,26 @@ Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Focus"
 SetBorderColor 200 200 200
 SetFontSize 35
 
-Show
-Sockets == 2
-Rarity Normal Magic
-SetBorderColor 200 200 200
-SetFontSize 35
-Height 3
+#--------------------------
+# Waystones
+#--------------------------
+
+#High tier Waystones
+Show 
+WaystoneTier >= 13
+Class == "Waystones"
+SetFontSize 45
+SetTextColor 0 0 0 255
+SetBackgroundColor 235 235 235 255
+PlayAlertSound 5 100
+PlayEffect Yellow
+MinimapIcon 1 Red Square
+
+# Low Tier Waystones
+Hide
+WaystoneTier <= 12
+Class == "Waystones"
+
 
 
 
