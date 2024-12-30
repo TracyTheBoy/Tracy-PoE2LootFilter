@@ -27,7 +27,7 @@ SetFontSize 40
 # Gold
 #--------------------------
 
-Show
+Hide
 StackSize < 100
 BaseType == "Gold"
 SetTextColor 180 180 180
@@ -54,26 +54,26 @@ SetFontSize 30
 #------------------------------------
 
 Show # $type->uncutgem $level->20
-	BaseType == "Uncut Skill Gem" "Uncut Spirit Gem"
-	ItemLevel >= 20
-	SetFontSize 35
-	SetTextColor 255 0 0 255
-	SetBorderColor 255 0 0 255
-	SetBackgroundColor 255 255 255 255
-	PlayAlertSound 6 300
-	PlayEffect Red
-	MinimapIcon 0 Red Star
+BaseType == "Uncut Skill Gem" "Uncut Spirit Gem"
+ItemLevel >= 20
+SetFontSize 35
+SetTextColor 255 0 0 255
+SetBorderColor 255 0 0 255
+SetBackgroundColor 255 255 255 255
+PlayAlertSound 6 300
+PlayEffect Red
+MinimapIcon 0 Red Star
 	
 Show # $type->uncutgem $level->19
-	BaseType == "Uncut Spirit Gem"
-	ItemLevel == 19
-	SetFontSize 35
-	SetTextColor 0 0 0 255
-	SetBorderColor 0 0 0 255
-	SetBackgroundColor 240 90 35 255
-	PlayAlertSound 2 200
-	PlayEffect Yellow
-	MinimapIcon 1 Yellow Triangle
+BaseType == "Uncut Spirit Gem"
+ItemLevel == 19
+SetFontSize 35
+SetTextColor 0 0 0 255
+SetBorderColor 0 0 0 255
+SetBackgroundColor 240 90 35 255
+PlayAlertSound 2 200
+PlayEffect Yellow
+MinimapIcon 1 Yellow Triangle
 
 Hide
 BaseType == "Uncut Spirit Gem"
@@ -201,7 +201,7 @@ MinimapIcon 2 Grey Circle
 
 Show
 Class "Currency"
-BaseType "Simulacrum Splinter" "Breach Splinter" " Artifact" "Catalyst" 
+BaseType "Simulacrum Splinter" "Breach Splinter" " Artifact"
 SetTextColor 255 207 132
 SetBorderColor 255 207 132
 MinimapIcon 2 Grey Circle
@@ -214,19 +214,30 @@ Hide
 Class "Currency"
 BaseType "Wisdom" "Orb of Augmentation" "Orb of Transmutation"
 
-# Unknown currency
-Show
-Class "Currency"
-SetTextColor 255 207 132
-SetBorderColor 255 207 132
-SetBackgroundColor 76 51 12
+
+#===============================================================================================================
+# Catalysts
+#===============================================================================================================
+
+
+Show  
+Class == "Stackable Currency"
+BaseType == "Adaptive Catalyst"
+SetFontSize 35
+SetTextColor 0 0 0 255
+SetBorderColor 0 0 0 255
+SetBackgroundColor 210 178 135 255
 PlayAlertSound 2 300
-PlayEffect Pink
-MinimapIcon 1 White Circle
+PlayEffect Grey
+MinimapIcon 2 Grey Circle
+
+Hide  
+Class == "Stackable Currency"
+BaseType == "Neural Catalyst" "Xoph's Catalyst" "Tul's Catalyst" "Esh's Catalyst" "Reaver Catalyst" "Chayula's Catalyst" "Flesh Catalyst" "Carapace Catalyst" "Sibilant Catalyst" "Skittering Catalyst"
 
 
 #===============================================================================================================
-# [[3300]] Fragments
+# Fragments
 #===============================================================================================================
 
 # Fragments
@@ -339,6 +350,17 @@ MinimapIcon 1 Red Square
 Hide
 WaystoneTier <= 12
 Class == "Waystones"
+
+
+# Unknown currency
+Show
+Class "Currency"
+SetTextColor 255 207 132
+SetBorderColor 255 207 132
+SetBackgroundColor 76 51 12
+PlayAlertSound 2 300
+PlayEffect Pink
+MinimapIcon 1 White Circle
 
 
 
