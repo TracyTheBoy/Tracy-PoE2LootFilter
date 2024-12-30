@@ -233,7 +233,7 @@ MinimapIcon 2 Grey Circle
 
 Hide  
 Class == "Stackable Currency"
-BaseType == "Neural Catalyst" "Xoph's Catalyst" "Tul's Catalyst" "Esh's Catalyst" "Reaver Catalyst" "Chayula's Catalyst" "Flesh Catalyst" "Carapace Catalyst" "Sibilant Catalyst" "Skittering Catalyst"
+BaseType == "Neural Catalyst" "Xoph's Catalyst" "Tul's Catalyst" "Esh's Catalyst" "Reaver Catalyst" "Chayula's Catalyst" "Flesh Catalyst" "Carapace Catalyst" "Sibilant Catalyst" "Skittering Catalyst" "Uul-Netol's Catalyst"
 
 
 #===============================================================================================================
