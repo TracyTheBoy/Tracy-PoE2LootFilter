@@ -1,17 +1,17 @@
-#--------------------------
+#===============================================================================================================
 # Overrides - Uniques, Valuables
-#--------------------------
+#===============================================================================================================
 
-Show # $type->uniques $tier->multispecialhigh
-	Rarity Unique
-	BaseType == "Stellar Amulet" "Sapphire Ring"
-	SetFontSize 45
-	SetTextColor 0 0 0 255
-	SetBorderColor 120 150 255 255
-	SetBackgroundColor 175 96 37 255
-	PlayAlertSound 3 300
-	PlayEffect Blue
-	MinimapIcon 1 Blue Star
+Show 
+Rarity Unique
+BaseType == "Stellar Amulet" "Sapphire Ring"
+SetFontSize 45
+SetTextColor 0 0 0 255
+SetBorderColor 120 150 255 255
+SetBackgroundColor 175 96 37 255
+PlayAlertSound 3 300
+PlayEffect Blue
+MinimapIcon 1 Blue Star
 
 Show
 Rarity Unique
@@ -23,9 +23,9 @@ PlayEffect Brown
 MinimapIcon 2 Brown Star
 SetFontSize 40
 
-#--------------------------
+#===============================================================================================================
 # Gold
-#--------------------------
+#===============================================================================================================
 
 Hide
 StackSize < 100
@@ -49,9 +49,9 @@ SetBorderColor 0 0 0 255
 SetBackgroundColor 0 0 0 180
 SetFontSize 30
 
-#------------------------------------
+#===============================================================================================================
 #   [2801] Uncut Gem Progression
-#------------------------------------
+#===============================================================================================================
 
 Show # $type->uncutgem $level->20
 BaseType == "Uncut Skill Gem" "Uncut Spirit Gem"
@@ -86,9 +86,9 @@ ItemLevel < 20
 Hide
 BaseType == "Uncut Support Gem"
 
-#--------------------------
+#===============================================================================================================
 # Socketables and Special Character Equipment
-#--------------------------
+#===============================================================================================================
 
 # Special A Tier - League specific socketables and jewels
 Show 
@@ -127,9 +127,9 @@ SetBorderColor 0 240 190
 SetFontSize 40
 PlayEffect Cyan Temp
 
-#--------------------------
+#===============================================================================================================
 # Charms and Runes
-#--------------------------
+#===============================================================================================================
 
 Show 
 Class == "Socketable"
@@ -140,9 +140,9 @@ PlayEffect Cyan Temp
 Hide
 BaseType "Charm" "Rune"
 
-#--------------------------
+#===============================================================================================================
 # Socketables and Special Character Equipment
-#--------------------------
+#===============================================================================================================
 
 # Currency Tier S: Divine, PJO, GJO, Mirror
 Show
@@ -171,7 +171,7 @@ SetFontSize 40
 # Currency Tier B
 Show
 Class "Currency"
-BaseType "Vaal Orb" "Chaos Orb" "Lesser Jeweller's Orb" "Exotic" "Exalted Orb"  "Armourer's Scrap" "Regal Orb" "Artificer's Orb" "Glassblower's Bauble" "Orb of Alchemy"
+BaseType "Vaal Orb" "Chaos Orb" "Lesser Jeweller's Orb" "Exotic" "Exalted Orb" "Simulacrum Splinter" "Armourer's Scrap" "Regal Orb" "Artificer's Orb" "Glassblower's Bauble" "Orb of Alchemy"
 SetTextColor 255 207 132
 SetBorderColor 255 207 132
 SetBackgroundColor 76 51 12
@@ -194,17 +194,21 @@ MinimapIcon 1 White Circle
 # Currency Tier C: Vaal, Chaos, Exalt, Exotic
 Show
 Class "Currency"
-BaseType "Arcanist's Etcher" "Blacksmith's Whetstone" "Regal Shard" "Chance Shard"
+BaseType "Arcanist's Etcher" "Blacksmith's Whetstone" "Chance Shard"
 SetTextColor 255 207 132
 SetBorderColor 255 207 132
 MinimapIcon 2 Grey Circle
 
 Show
 Class "Currency"
-BaseType "Simulacrum Splinter" "Breach Splinter" " Artifact"
+BaseType "Breach Splinter" " Artifact"
 SetTextColor 255 207 132
 SetBorderColor 255 207 132
 MinimapIcon 2 Grey Circle
+
+Hide
+Class "Currency"
+BaseType "Regal Shard"
 
 Show
 Class "Currency"
@@ -240,7 +244,6 @@ BaseType == "Neural Catalyst" "Xoph's Catalyst" "Tul's Catalyst" "Esh's Catalyst
 # Fragments
 #===============================================================================================================
 
-# Fragments
 Show
 BaseType "Simulacrum" " Tablet" "Breachstone" "Ultimatum" " Fragment" "Cowardly Fate" "Deadly Fate" "Victorious Fate" "Expedition Logbook"
 SetTextColor 255 207 255
@@ -288,9 +291,9 @@ PlayAlertSound 2 300
 PlayEffect Grey
 MinimapIcon 2 Grey Circle
 
-#--------------------------
-# Value Rares
-#--------------------------
+#===============================================================================================================
+# Rings, Amulets, Belts
+#===============================================================================================================
 
 Show
 Class "Rings" "Amulets" "Belts"
@@ -301,13 +304,9 @@ SetBorderColor 233 206 75
 PlayEffect Yellow
 MinimapIcon 1 Yellow Diamond
 
-#--------------------------
-# Rings, Amulets, Belts
-#--------------------------
-
 Show
 Rarity Normal
-BaseType == "Stellar Amulet"
+BaseType == "Stellar Amulet" "Sapphire Ring"
 SetFontSize 40
 PlayEffect White
 
@@ -315,9 +314,17 @@ Hide
 Class "Rings" "Amulets" "Belts"
 Rarity <= Magic
 
-#--------------------------
+#===============================================================================================================
+# Armour and Weapons
+#===============================================================================================================
+
+Hide
+Class "Two Hand Maces" "One Hand Maces"
+Rarity Rare
+
+#===============================================================================================================
 # Salvagable Items
-#--------------------------
+#===============================================================================================================
 
 Hide
 Sockets <= 2
@@ -331,11 +338,11 @@ Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Focus"
 SetBorderColor 200 200 200
 SetFontSize 35
 
-#--------------------------
+#===============================================================================================================
 # Waystones
-#--------------------------
+#===============================================================================================================
 
-#High tier Waystones
+# High tier Waystones
 Show 
 WaystoneTier >= 13
 Class == "Waystones"
