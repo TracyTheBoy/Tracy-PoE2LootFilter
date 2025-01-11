@@ -65,7 +65,7 @@ PlayEffect Red
 MinimapIcon 0 Red Star
 	
 Show # $type->uncutgem $level->19
-BaseType == "Uncut Spirit Gem"
+BaseType == "Uncut Spirit Gem" "Uncut Skill Gem"
 ItemLevel == 19
 SetFontSize 35
 SetTextColor 0 0 0 255
@@ -81,7 +81,7 @@ ItemLevel < 19
 
 Hide
 BaseType == "Uncut Skill Gem"
-ItemLevel < 20
+ItemLevel < 19
 
 Hide
 BaseType == "Uncut Support Gem"
@@ -306,7 +306,7 @@ MinimapIcon 1 Yellow Diamond
 
 Show
 Rarity Normal
-BaseType == "Stellar Amulet" "Sapphire Ring"
+BaseType == "Stellar Amulet" "Sapphire Ring" "Breach Ring"
 SetFontSize 40
 PlayEffect White
 
